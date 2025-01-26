@@ -2,7 +2,10 @@
 Ancap Theme for Starship
 
 ## Preview
-![demo image](demo.png)
+![demo image 1](demo1.png)
+
+If you're in a ssh session it has a indication on the right side
+![demo image 2](demo2.png)
 
 ### Install
 Run the command below to download and install the theme.
