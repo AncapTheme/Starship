@@ -1,20 +1,31 @@
 format = """
-[░▒▓](#ffd033)\
+$env_var\
+[](fg:#ffd000)\
 [ 󱔎 ](bg:#ffd000 fg:#252525)\
 [󰇝](bg:#ffd000 fg:#161616)\
 $directory\
-[](fg:#ffd000 bg:#323232)\
+[](fg:#ffd000)\
 $git_branch\
 $git_status\
-[](fg:#323232 bg:#202020)\
-$nodejs\
-$rust\
-$golang\
-$c\
-[](fg:#222222 bg:#161616)\
-$time\
-[ ](fg:#161616)\
-\n$character"""
+$fill\
+$hostname\
+$character"""
+
+[fill]
+symbol = ' '
+style = "fg:#646464"
+
+[env_var]
+symbol = "╭"
+variable = 'SHELL'
+format = "$symbol"
+disabled = false
+
+[hostname]
+ssh_only = true
+format = '[ ssh 󱕵 ]($style)'
+disabled = false
+style = "fg:#ffd000"
 
 [directory]
 style = "fg:#252525 bg:#ffd000"
@@ -23,19 +34,19 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Documents" = " 󰈙 "
+"Downloads" = "   "
+"Music" = "  "
+"Pictures" = "   "
 
 [git_branch]
 symbol = ""
 style = "bg:#FFF692"
-format = '[[ $symbol $branch ](fg:#FFD000 bg:#323232)]($style)'
+format = '[[ $symbol $branch ](fg:#FFD000)]($style)'
 
 [git_status]
 style = "bg:#394260"
-format = '[[($all_status$ahead_behind )](fg:#FFD000 bg:#323232)]($style)'
+format = '[[($all_status$ahead_behind )](fg:#FFD000)]($style)'
 
 [nodejs]
 symbol = ""
@@ -64,4 +75,5 @@ style = "bg:#1d2230"
 format = '[[ $time ](fg:#fefefe bg:#161616)]($style)'
 
 [character]
-success_symbol = "󰜴"
+success_symbol = "\n╰"
+error_symbol = "\n╰"
