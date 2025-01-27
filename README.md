@@ -1,5 +1,5 @@
 # Starship
-Ancap Theme for Starship
+Ancap Theme for [Starship](https://github.com/starship/starship)
 
 ## Preview
 ![demo image 1](demo1.png)
@@ -10,5 +10,5 @@ If you're in a ssh session it has an indication on the right side
 ### Install
 Run the command below to download and install the theme.
 ```bash
-curl -L -o starship.toml https://raw.githubusercontent.com/AncapTheme/Starship/main/starship.toml && mv ./starship.toml ~/.config/
+curl -L -o install.sh https://raw.githubusercontent.com/AncapTheme/Starship/main/install.sh && chmod +x ./install.sh && ./install.sh
 ```
