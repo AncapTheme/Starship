@@ -4,7 +4,7 @@ Ancap Theme for Starship
 ## Preview
 ![demo image 1](demo1.png)
 
-If you're in a ssh session it has a indication on the right side
+If you're in a ssh session it has an indication on the right side
 ![demo image 2](demo2.png)
 
 ### Install
